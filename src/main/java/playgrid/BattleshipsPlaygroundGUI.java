@@ -55,7 +55,9 @@ public class BattleshipsPlaygroundGUI {
     @Override
     protected void paintComponent(Graphics g) {
       super.paintComponent(g);
-      g.drawImage(image, 0, 0, null); // see javadoc for more info on the parameters
+
+      Dimension dimension = getSize();
+      g.drawImage(image, 0, 0, dimension.width, dimension.height, null);
     }
 
     private int getImageWidth() {
